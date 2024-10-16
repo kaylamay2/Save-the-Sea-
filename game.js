@@ -39,8 +39,8 @@ var startGame = function() {
     Game.setBoard(1,new Starfield(50,0.6,100));
     Game.setBoard(2,new Starfield(100,1.0,50));
   }  
-  Game.setBoard(3,new TitleScreen("Alien Invasion", 
-                                  "Press fire to start playing",
+  Game.setBoard(3,new TitleScreen("Save the Sea", 
+                                  "Press bubble to start playing",
                                   playGame));
 };
 
@@ -67,14 +67,14 @@ var playGame = function() {
 };
 
 var winGame = function() {
-  Game.setBoard(3,new TitleScreen("You win!", 
-                                  "Press fire to play again",
+  Game.setBoard(3,new TitleScreen("You saved the sea!", 
+                                  "Press bubble to play again",
                                   playGame));
 };
 
 var loseGame = function() {
-  Game.setBoard(3,new TitleScreen("You lose!", 
-                                  "Press fire to play again",
+  Game.setBoard(3,new TitleScreen("Uh oh! The sea's dirty!", 
+                                  "Press bubble to play again",
                                   playGame));
 };
 
@@ -91,13 +91,13 @@ var Starfield = function(speed,opacity,numStars,clear) {
   // If the clear option is set, 
   // make the background black instead of transparent
   if(clear) {
-    starCtx.fillStyle = "#000";
+    starCtx.fillStyle = "#002ab9";
     starCtx.fillRect(0,0,stars.width,stars.height);
   }
 
   // Now draw a bunch of random 2 pixel
   // rectangles onto the offscreen canvas
-  starCtx.fillStyle = "#FFF";
+  starCtx.fillStyle = "#5f82f9";
   starCtx.globalAlpha = opacity;
   for(var i=0;i<numStars;i++) {
     starCtx.fillRect(Math.floor(Math.random()*stars.width),
