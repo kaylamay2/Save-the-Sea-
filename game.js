@@ -68,13 +68,13 @@ var playGame = function() {
 
 var winGame = function() {
   Game.setBoard(3,new TitleScreen("You saved the sea!", 
-                                  "Press bubble to play again",
+                                  "Press space to play again",
                                   playGame));
 };
 
 var loseGame = function() {
   Game.setBoard(3,new TitleScreen("Uh oh! The sea's dirty!", 
-                                  "Press bubble to play again",
+                                  "Press space to play again",
                                   playGame));
 };
 
