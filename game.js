@@ -73,7 +73,7 @@ var winGame = function() {
 };
 
 var loseGame = function() {
-  Game.setBoard(3,new TitleScreen("Uh oh! The sea's dirty!", 
+  Game.setBoard(3,new TitleScreen("Yikes! The sea's dirty!", 
                                   "Press space to play again",
                                   playGame));
 };
