@@ -40,7 +40,7 @@ var startGame = function() {
     Game.setBoard(2,new Starfield(100,1.0,50));
   }  
   Game.setBoard(3,new TitleScreen("Save the Sea", 
-                                  "Press bubble to start playing",
+                                  "Press space to start playing",
                                   playGame));
 };
 
